@@ -53,10 +53,6 @@ module.exports = function toReadable (number) {
         if (num[1] + num[2] === '00') {
             return result;
         }
-        if (parseInt(num[1]) === 0) {
-            result += ' ' + Object.keys(numPack).find(key => numPack[key] === num[2]);
-            return result;
-        }
         if (parseInt(num[1]) === 1) {
             result += ' ' +Object.keys(numPack).find(key => numPack[key] === num[1] + num[2]);
             return result;
@@ -66,5 +62,6 @@ module.exports = function toReadable (number) {
             result += ' ' + Object.keys(numPack).find(key => numPack[key] === num[2]);
         }
         return result;
+        
     }
 }
